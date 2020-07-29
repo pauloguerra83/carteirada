@@ -1,42 +1,62 @@
 # Carteirada
 
-Projeto [picpayclone](https://github.com/cicerojmm/picPayCloneMentoriaDIO) e fiz a seguintes alteracoes:
+Um codigo aberto de carteira digital para vc dizer que é sua.
 
-Trocar o nome do projeto para Carteira Digital
+Faça um fork e implemente os desafios e entre em contato para discutirmos as soluções aplicadas.
 
-Objetivo é ter um projeto padrao para servir de consulta para outras implementações
+Objetivo é ter um projeto padrão para servir de consulta para outras implementações
+
+Baseado no Projeto [picpayclone](https://github.com/cicerojmm/picPayCloneMentoriaDIO).
+
+picpayclone foi desenvolvido em um live code da [digitalinnovation.one/live-coding](https://web.digitalinnovation.one/live-coding)
 
 ## Desafios
 
-  1. Padronizar o codigo
-  2. Configurar docker-compose subir o banco junto
-  3. Alterar codigo para postar e processar saldo usando Sistema de Mensagem ( Ex.: RabbitMQ )
-  4. Configurar com docker o sistema de mensagem
-    - (https://zgadzaj.com/developmeont/docker/docker-compose/containers/rabbitmq)
-  5. Criar Suite de Teste
-    - Testes de Negocio com RestAssured
-    - Testes de Integração
-    - Testes Unitarios
-    - Automatizacao de teste
-  6. Internacionalizacao das mensagens
-  7. Incluir um provedor de autenticacao
-    - Autenticacao OAuth2 embedded
-    - Autenticacao OAuth2 externo
-    - Autenticacao com redes sociais como google/facebook/linkedin
-  8. Fazer deploy automatizado em alguma cloud
-    - Escolher uma ferramenta de Pipeline 
-      - githubAction 
-      - jenkins
-      - heroku
-    - Definição de profiles de ambiente
-  9. Criar o mesmo projeto em 4 versoes:
-    - v1 - Springboot com apache camel 
-    - v2 - Springboot com graalvm (https://spring.io/blog/2020/04/09/spring-graalvm-native-0-6-0-released)
-    - v3 - Quakus com microprofile
-    - v4 - Converter para Javascript
-    - v5 - Converter para Python com Flask
++ 1. Padronizar o codigo e pequenos ajustes
 
-## Releases
++ 2. Configurar docker-compose subir o banco junto
+
++ 3. Alterar codigo para postar e processar saldo usando Sistema de Mensagem ( Ex.: RabbitMQ )
+
++ 4. Configurar com docker o sistema de mensagem
+  + 4.1 link de exemplo: https://zgadzaj.com/developmeont/docker/docker-compose/containers/rabbitmq
+
++ 5. Criar Suite de Teste
+  - 5.1 Testes de Negocio com RestAssured
+  - 5.2 Testes de Integração
+  - 5.3 Testes Unitarios
+  - 5.4 Automatizacao de teste
+
++ 6. Internacionalizacao das mensagens (pt-BR/en-US/es-ar)
+
++ 7. Incluir um provedor de autenticacao
+  - 7.1 Autenticacao OAuth2 embedded
+  - 7.2 Autenticacao OAuth2 externo
+  - 7.3 Autenticacao com redes sociais como google/facebook/linkedin
+
++ 8. Fazer deploy automatizado em alguma cloud
+  - 8.1 Escolher uma ferramenta de Pipeline 
+    - 8.1.1 githubAction 
+    - 8.1.2 jenkins
+    - 8.1.3 heroku
+  - 8.2 Definição de profiles de ambiente
+
++ 9. Integracao com o PIX do Banco Central
+
++ 10. Integracao com outros meios de pagamento
+  - 10.1 integracao com a Rede do itaú
+  - 10.2 integracao com a Rede do itaú
+  - 10.3 integracao com o Nubank
+
++ 13. Criar o mesmo projeto em 6 versoes:
+  - 13.1 versao 2 - Springboot com apache camel 
+  - 13.2 versao 3 - Springboot com graalvm
+  - 13.3 versao 4 - Springboot com Quakus
+  - 13.4 versao 5 - Quakus com microprofile
+  - 13.5 versao 6 - Converter para Javascript
+  - 13.6 versao 7 - Converter para Python com Flask
+
+## Plano de releases sugerido
 
 * Release 0.0.1
   - Primeiro Commit
@@ -83,15 +103,19 @@ Objetivo é ter um projeto padrao para servir de consulta para outras implementa
   - Springboot com graalvm
 
 * Release 4.0.0
+  - Springboot com quarkus
+
+* Release 5.0.0
   - Quakus com microprofile
   
-* Release 5.0.0
+* Release 6.0.0
   - Converter para Javascript
 
-* Release 6.0.0
+* Release 7.0.0
   - Converter para Python com Flask
 
 
 # Bibliotecas usadas
 
-  - [springData](https://docs.spring.io/spring-data/jpa/docs/2.3.2.RELEASE/reference/html/#reference) 
+  - [spring-data](https://docs.spring.io/spring-data/jpa/docs/2.3.2.RELEASE/reference/html/#reference)
+  - [spring-boot e graalvm](https://spring.io/blog/2020/04/09/spring-graalvm-native-0-6-0-released)
